@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            display: block;
+            width: 280px;
+            height: 210px;
+            margin: auto;
+            padding: 0;
+            border: none;
+            background-color: black;
+        }
+
+        button {
+            display: block;
+            font-size: inherit;
+            margin: auto;
+            padding: 0.6em;
+        }
+    </style>
+</head>
+<body>
+
+<p></p>
+
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+
+<script type="x-shader/x-vertex" id="vertex-shader">
+    #version 100
+    void main() {
+      gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+      gl_PointSize = 64.0;
+    }
+</script>
+
+<script type="x-shader/x-fragment" id="fragment-shader">
+    #version 100
+    void main() {
+      gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+    }
+</script>
+
+<script src="../util.js"></script>
+<script src="07.js"></script>
+</body>
+</html>
